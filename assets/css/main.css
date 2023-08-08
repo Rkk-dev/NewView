@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
+
+:root {
+  --ff: "League Gothic", sans-serif;
+}
+
+body {
+  font-family: "League Gothic", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Header Styles : START */
+.pageHeader {
+  text-align: center;
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.pageHeader img {
+  width: 50px;
+}
+
+.pageHeader .pageHeaderTitle {
+  flex: 1;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+}
+
+.pageHeaderTitle .first {
+  color: #3e7793;
+}
+
+.pageHeaderTitle .second {
+  color: #9b455b;
+}
+
+.pageHeaderTitle .info {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: goldenrod;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 800px) {
+  .pageHeader img {
+    /* width: 100px; */
+  }
+}
+
+/* Header Styles : END */
+
+/* Title Styles : START */
+.mainTitle {
+  text-align: center;
+  font-family: "League Gothic", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 5.3px;
+  background-image: linear-gradient(#aa076b, #61045f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 0.5rem 0;
+}
+
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  from {
+    background-position: 200% center;
+  }
+}
+
+/* Title Styles : END */
+
+/* Main Images Styles : START */
+.mainImages {
+  /* max-width: 1000px;
+  margin: 1rem auto;
+  text-align: center; */
+}
+
+.mainImageContainer {
+  text-align: center;
+  /* animation: fadeinout 6s ease-in-out infinite; */
+
+}
+
+.mainImageContainer img {
+  animation: flash linear 6s, pulse linear 6s infinite;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 800px) {
+  .mainImageContainer {
+    width: 100%;
+    height: 400px;
+    /* display: flex; */
+    /* border-radius: 1rem; */
+  }
+
+  .mainImageContainer img {
+    width: 100%;
+    object-fit: cover;
+    /* border-radius: 1rem; */
+    /* height: 400px; */
+  }
+
+  .mainImageContainer {
+    animation: none;
+  }
+
+  .mainImageContainer img {
+    animation: flash linear 6s, pulse linear 6s infinite;
+  }
+}
+
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 50%;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Main Images Styles : END */
+
+/* Footer Styles :START */
+.pageFooter {
+  text-align: center;
+  /* margin-top: 4rem; */
+  padding: 1rem 1rem;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.pageFooter .special {
+  color: #9b455b;
+}
+
+.pageFooter .btn-one {
+  display: block;
+  width: 100%;
+  color: #fff;
+  background: #9b455b;
+  border: 1px solid transparent;
+}
+
+.pageFooter .btn-one:hover,
+.pageFooter .btn-one:active {
+  color: #9b455b;
+  background-color: #ffffff;
+  border-color: #9b455b;
+}
+
+@media screen and (min-width: 800px) {
+  .footerWrapper {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footerAddress {
+    flex-basis: 40%;
+    text-align: start;
+  }
+
+  .footerDivider hr {
+    width: 1px;
+    height: 20px;
+  }
+
+  .footerLink {
+    flex-basis: 40%;
+    text-align: end;
+  }
+}
+
+/* Footer Styles :END */
+
+@media screen and (min-width: 800px) {
+  .pageHeader .pageHeaderTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .pageHeaderTitle .info {
+    color: black;
+  }
+}
+
+
+/* Matter  */
+.matter {
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.matterContent {
+  font-family: serif;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  text-transform: capitalize;
+}
+
+.matterTitle {
+  background: #9b455b;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.specialBrand {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+.smallText {
+  font-size: 50%;
+}
+
+.blackText {
+  color:#000;
+}
+
+.whiteText {
+  color:#ccc;
+}
+
+.bigText {
+  font-size: 150%;
+  padding-left: 0.5rem;
+}
+
+@media screen and (min-width: 800px) {
+  .matterContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+ 
+}
+@media screen and (min-width: 1000px) {
+  .matter {
+      padding: 2rem 0;
+  }
+ 
+}
+
+/* Matter  */
